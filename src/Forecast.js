@@ -10,7 +10,7 @@ export default function Forecast() {
           id="icon"
           alt="clear"
         />
-        <div>Monday</div>
+        <div>Mon</div>
         <div>0˚ | -6˚</div>
       </li>
       <li>
