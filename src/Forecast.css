@@ -1,0 +1,17 @@
+.Forecast ul {
+  list-style: none;
+}
+
+.Forecast li {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 18px;
+  color: purple;
+  position: relative;
+  bottom: 70px;
+}
+
+.Forecast img {
+  display: inline-block;
+  width: 60px;
+}
