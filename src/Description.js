@@ -2,14 +2,15 @@ import React from "react";
 import "./Description.css";
 import FormattedDate from "./FormattedDate.js";
 import Icon from "./Icon.js";
+import Forecast from "./Forecast.js";
 
 
 export default function Description(props) {
   return (
     <div className="DescriptionData">
-      <h1>{props.data.city}</h1>
+      <h1>   <Forecast defaultCity="Miami" /></h1>
       <ul>
-        <li> <FormattedDate date={props.data.date} /></li>
+        <li> <FormattedDate date={props.data.dt} /></li>
         <li className="text-capitalize"> {props.data.description}</li>
       </ul>
       <div className="row">
