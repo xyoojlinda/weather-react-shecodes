@@ -1,30 +1,45 @@
 import React from "react";
 import "./Description.css";
+import FormattedDate from "./FormattedDate.js";
+import Icon from "./Icon.js";
 
-export default function Description() {
+
+export default function Description(props) {
   return (
     <div className="DescriptionData">
-      <h1 id="city">Milwaukee </h1>
-      <h4>Last updated:</h4>
-      <h2> Jan. 22, 21 ; 12:00 PM</h2>
-      <h3>
-        <img
-          src="http://openweathermap.org/img/wn/04n@2x.png"
-          id="icon"
-          alt="clear"
-        />
-        °C|°F
-      </h3>
-
-      <p className="degree">
-        <span id="degree">Cloudy</span>
-      </p>
-
-      <h5>
-        Humidity: <span id="humid" className="description"></span>%
-        <br />
-        Wind speed: <span id="windy" className="description"></span>km/h
-      </h5>
+      <h1>{props.data.city}</h1>
+      <ul>
+        <li> <FormattedDate date={props.data.date} /></li>
+        <li className="text-capitalize"> {props.data.description}</li>
+      </ul>
+      <div className="row">
+        <div className="col-6">
+          <div className="clearfix">
+            <span className="float-start">
+              <Icon code={props.data.icon} />
+            </span>
+            <span className="float-start">
+              <strong id="temperature">
+                {props.data.temperature}
+              </strong>
+              <a href="/" className="active">
+                °F
+                </a>{" "}
+                |<a href="/">°C</a>
+            </span>
+          </div>
+        </div>
+        <div className="col-6">
+          <ul>
+            <li>
+              Humidity:{props.data.humidity}%
+                 </li>
+            <li>
+              Wind speed: {Math.round(props.data.wind)}mph
+                </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
