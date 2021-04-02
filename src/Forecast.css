@@ -1,17 +1,12 @@
-.Forecast ul {
+.Forecast .forecastList {
   list-style: none;
-}
-
-.Forecast li {
-  display: inline-block;
-  padding: 10px 20px;
+  font-family: "Tinos", serif;
   font-size: 18px;
-  color: purple;
-  position: relative;
-  bottom: 70px;
+  font-weight: 900;
+  text-align: center;
+  margin-top: 10px;
 }
 
 .Forecast img {
-  display: inline-block;
-  width: 60px;
+  max-width: 100px;
 }
