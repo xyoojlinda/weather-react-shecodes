@@ -1,6 +1,4 @@
 import React from "react";
-import FormattedDate from "./FormattedDate.js";
-import Icon from "./Icon.js";
 import Forecast from "./Forecast.js";
 
 
