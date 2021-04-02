@@ -51,3 +51,12 @@ h5 {
   bottom: 100px;
   left: 400px;
 }
+
+.Description .city{
+    color: #42a5f5;
+  font-size: 50px;
+  font-family: "Parisienne";
+  font-weight: 900;
+  padding: 8px 0px;
+  margin-bottom: 0px;
+}
