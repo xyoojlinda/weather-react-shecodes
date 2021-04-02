@@ -6,8 +6,11 @@ import "./Forecast.css";
 
 export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
+  const [forecast, setForecast] = useState(null);
 
   function handleForecastData(response) {
+    setForecast(response.data);
+    setLoaded(true);
   }
 
   if (loaded && props.city === forecast.city.name) {
