@@ -24,6 +24,7 @@ export default function Description(props) {
         </div>
         <div className="col-4">
           <ul className="DescriptionInfo">
+          <ul className="currentWeatherInfo">
             <li>Feels like: {props.info.feelsLike}°C</li>
             <li>Humidity: {props.info.humidity}%</li>
             <li>Wind: {props.info.windSpeed} km/h</li>
