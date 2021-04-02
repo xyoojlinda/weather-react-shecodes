@@ -9,24 +9,27 @@ export default function Forecast(props) {
 
   function handleForecastData(response) {
   }
-  if (weatherData.ready) {
+
+  if (loaded && props.city === forecast.city.name) {
     return (
-      <div className="Weather">
-        <form onSubmit={handleSubmit}>
+      <div className="Forecast ">
+        <div className="forecastList">
           <div className="row">
-            <div className="col-9">
-              <input type="search" placeholder="Enter a city" className="form-control" autoFocus="on" onChange={cityChange} />
-            </div>
-            <div className="col-3">
-              <input type="submit" value="Search" className="btn btn-primary w-100" />
-            </div>
+            <ForecastElement prediction={forecast.list[0]} />
+            <ForecastElement prediction={forecast.list[1]} />
+            <ForecastElement prediction={forecast.list[2]} />
+            <ForecastElement prediction={forecast.list[3]} />
+            <ForecastElement prediction={forecast.list[4]} />
           </div>
-        </form>
-        <Description data={weatherData} />
+
+        </div>
       </div>
     );
   } else {
-    search();
-    return ("Loading..");
+    let apiKey = "6c3ed25c99387b9ebbd7be3237775381";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${props.city}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleForecastData);
+
+    return "loading...";
   }
 }
