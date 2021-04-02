@@ -10,6 +10,4 @@ export default function Search() {
       </label>
       <input type="submit" value="🔍" className="SearchButton" />
       <input type="submit" value="📍" className="CurrentCityButton" />
-    </form>
-  );
 }
