@@ -1,5 +1,4 @@
 import React from "react";
-import Forecast from "./Forecast.js";
 
 
 export default function Description(props) {
