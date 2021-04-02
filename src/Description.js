@@ -1,5 +1,8 @@
 import React from "react";
+import Icon from "./Icon";
+import WeatherTemp from "./WeatherTemp";
 
+import "./Description.css";
 
 export default function Description(props) {
   return (
