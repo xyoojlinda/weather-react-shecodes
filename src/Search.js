@@ -44,6 +44,25 @@ export default function Search(props) {
       <div className="Search">
         <div className="location">
           <form className="search" onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Type a city"
+              className="search form-control"
+              autoFocus="on"
+              onChange={handleCityChange}
+            />
+            <button type="submit" className="button btn btn-light mb-2">
+              <i className="searchIcon fas fa-search"></i>
+            </button>
+            <button type="submit" className="button btn btn-light mb-2">
+              <i className="locationIcon fas fa-map-marker-alt"></i>
+            </button>
+          </form>
+        </div>
+        <FormattedDate date={weatherData.date} />
+        <Description info={weatherData} />
+        <Forecast city={weatherData.city} />
+      </div>
     );
   } else {
     search();
