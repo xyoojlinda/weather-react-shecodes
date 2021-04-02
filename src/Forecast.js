@@ -1,35 +1,13 @@
 import React, { useState } from "react";
+import ForecastElement from "./ForecastElement";
 import axios from "axios";
+
 import "./Forecast.css";
-import Description from "./Description";
 
-export default function Weather(props) {
-  const [weatherData, setWeatherData] = useState({ ready: false });
-  const [city, setCity] = useState(props.defaultCity);
+export default function Forecast(props) {
+  const [loaded, setLoaded] = useState(false);
 
-  function handleResponse(response) {
-    setWeatherData({
-      ready: true,
-      temperature: (Math.round(response.data.main.temp)),
-      city: (response.data.name),
-      wind: (response.data.wind.speed),
-      humidity: (response.data.main.humidity),
-      description: (response.data.weather[0].description),
-      icon: `http://openweathermap.org/img/wn/${(response.data.weather[0].icon)}@2x.png`,
-      date: new Date(response.data.dt * 1000)
-    });
-  }
-  function handleSubmit(event) {
-    event.preventDefault();
-    search();
-  }
-  function cityChange(event) {
-    setCity(event.target.value);
-  }
-  function search() {
-    const apiKey = "6c3ed25c99387b9ebbd7be3237775381";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=imperial`;
-    axios.get(apiUrl).then(handleResponse);
+  function handleForecastData(response) {
   }
   if (weatherData.ready) {
     return (
