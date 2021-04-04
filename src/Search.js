@@ -45,7 +45,7 @@ export default function Search(props) {
           <form className="search" onSubmit={handleSubmit}>
             <input
               type="text"
-              placeholder="Type a city"
+              placeholder="Enter a city"
               className="search form-control"
               autoFocus="on"
               onChange={handleCityChange}
