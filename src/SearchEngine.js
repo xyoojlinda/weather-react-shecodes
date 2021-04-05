@@ -59,23 +59,11 @@ export default function SearchEngine(props) {
       <div className="SearchEngine">
         <div className="location">
           <form className="search" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Type a city"
-              className="search form-control"
-              autoFocus="on"
-              onChange={handleCityChange}
-            />
-            <button type="submit" className="button btn btn-light mb-2">
-              <i className="searchIcon fas fa-search"></i>
-            </button>
-            <button
-              type="submit"
-              className="button btn btn-light mb-2"
-              onClick={navigation}
-            >
-              <i className="locationIcon fas fa-map-marker-alt"></i>
-            </button>
+            <label>
+              <input type="text" placeholder="Enter city name here" />
+            </label>
+            <input type="submit" value="🔍" className="SearchButton" />
+            <input type="submit" value="📍" className="CurrentCityButton" />
           </form>
         </div>
         <FormattedDate date={weatherData.date} />

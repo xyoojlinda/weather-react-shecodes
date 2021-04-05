@@ -9,7 +9,8 @@ function App() {
     <div className="App">
       <div className="border">
         <div className="container">
-          <SearchEngine defaultCity="New York" />
+          <SearchEngine defaultCity="Milwaukee" />
+          <br />
           <Footer />
         </div>
       </div>

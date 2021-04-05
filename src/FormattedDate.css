@@ -1,7 +1,7 @@
 .FormattedDate h1,
 h2 {
   line-height: 48px;
-  font-weight: 900;
+  font-weight: 300;
   text-align: center;
 }
 
@@ -11,7 +11,7 @@ h2 {
 }
 .FormattedDate .time {
   font-size: 28px;
-  font-weight: 900;
+  font-weight: 300;
 }
 
 .FormattedDate h1 {

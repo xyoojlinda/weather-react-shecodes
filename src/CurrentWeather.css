@@ -1,20 +1,19 @@
-.Description .city {
+
+.CurrentWeather .city {
   color: #42a5f5;
   font-size: 50px;
-  font-family: "Parisienne";
   font-weight: 900;
   padding: 8px 0px;
   margin-bottom: 0px;
 }
 
-.Description .currentWeatherInfo,
+.CurrentWeather .currentWeatherInfo,
 p {
   list-style: none;
-  font-family: "Tinos", serif;
   font-size: 18px;
   padding: 5px;
 }
 
-.Description .col-4 {
+.CurrentWeather .col-4 {
   padding: 5px;
 }

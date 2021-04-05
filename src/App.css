@@ -1,12 +1,11 @@
   
 .border {
-  max-width: 640px;
+  max-width: 700px;
   border: 1px solid rgb(43, 42, 129);
   margin: 30px auto;
-  border-radius: 20px;
-  padding: 15px;
-  box-shadow: 0 0 50px rgb(114, 110, 110), -10px 0 80px #5472f5,
-    10px 0 80px #3cf1f1b9;
+  border-radius: 40px;
+  padding: 20px;
+  box-shadow: 0 0 80px #5472f5;
 }
 
 .App {
