@@ -5,8 +5,12 @@
   text-align: center;
 }
 
+.SearchEngine .button {
+
+  margin: 3px;
+}
 
 .SearchEngine .location {
   text-align: center;
-  margin: 5px;
+  margin: 3px;
 }
