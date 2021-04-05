@@ -1,19 +1,20 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.css";
-import "./styles.css";
-import Forecast from "./Forecast";
+
 import SearchEngine from "./SearchEngine";
-import CurrentWeather from "./CurrentWeather";
 import Footer from "./Footer";
 
-export default function App() {
+import "./App.css";
+
+function App() {
   return (
     <div className="App">
-      <SearchEngine defaultCity="Milwaukee" />
-      <CurrentWeather />
-      <Forecast />
-      <Footer />
-
+      <div className="border">
+        <div className="container">
+          <SearchEngine defaultCity="New York" />
+          <Footer />
+        </div>
+      </div>
     </div>
   );
 }
+
+export default App;
