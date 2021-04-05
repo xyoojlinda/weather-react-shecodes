@@ -1,5 +1,5 @@
 import React from "react";
-import Icon from "./Icon";
+import WeatherIcon from "./WeatherIcon";
 
 export default function ForecastElement(props) {
   function hour() {
@@ -17,7 +17,7 @@ export default function ForecastElement(props) {
   return (
     <div className="col">
       {hour()}
-      <Icon code={props.prediction.weather[0].icon} />
+      <WeatherIcon code={props.prediction.weather[0].icon} />
       {temp()}
     </div>
   );
