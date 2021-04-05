@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import FormattedDate from "./FormattedDate";
-import Forecast from "./Forecast";
 import axios from "axios";
 
 import "./Search.css";
@@ -25,7 +23,7 @@ export default function Search(props) {
 
   function handleSubmit(event) {
     event.preventDefault();
-    search();
+    search(city);
   }
 
   function handleCityChange(event) {
@@ -58,9 +56,7 @@ export default function Search(props) {
             </button>
           </form>
         </div>
-        <FormattedDate date={weatherData.date} />
         <Description info={weatherData} />
-        <Forecast city={weatherData.city} />
       </div>
     );
   } else {

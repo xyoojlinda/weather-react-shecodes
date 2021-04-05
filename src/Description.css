@@ -1,62 +1,20 @@
-h1,
-h2 {
-  position: relative;
-  top: 60px;
-}
-h1 {
-  color: rgb(33, 33, 151);
-  font-size: 60px;
-  font-family: "Times New Roman", Times, serif;
-}
-
-h2 {
-  font-size: 20px;
-  font-weight: lighter;
-}
-
-h3,
-p {
-  text-align: right;
-  position: relative;
-  top: -90px;
-  right: 50px;
-}
-
-h3 {
-  font-size: 60px;
-  font-weight: bold;
-  line-height: 30px;
-  color: grey;
-}
-
-h4 {
-  font-family: "Times New Roman", Times, serif;
-  font-size: 20px;
-  color: rgb(94, 15, 94);
-  position: relative;
-  top: 50px;
-}
-
-.degree {
-  font-size: 30px;
-  position: relative;
-  left: -60px;
-}
-
-h5 {
-  font-size: 20px;
-  font-weight: lighter;
-  list-style-type: none;
-  position: relative;
-  bottom: 100px;
-  left: 400px;
-}
-
-.Description .city{
-    color: #42a5f5;
+.Description .city {
+  color: #42a5f5;
   font-size: 50px;
   font-family: "Parisienne";
   font-weight: 900;
   padding: 8px 0px;
   margin-bottom: 0px;
+}
+
+.Description .currentWeatherInfo,
+p {
+  list-style: none;
+  font-family: "Tinos", serif;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.Description .col-4 {
+  padding: 5px;
 }
