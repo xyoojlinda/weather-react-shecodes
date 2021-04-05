@@ -7,8 +7,6 @@
   padding: 15px;
   box-shadow: 0 0 50px rgb(114, 110, 110), -10px 0 80px #5472f5,
     10px 0 80px #3cf1f1b9;
-  backdrop-filter: blur(15px);
-  background-repeat: round;
 }
 
 .App {
@@ -17,7 +15,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
