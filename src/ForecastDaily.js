@@ -1,5 +1,4 @@
-
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ForecastDailyElement from "./ForecastDailyElement";
 import axios from "axios";
 
@@ -13,6 +12,19 @@ export default function ForecastDaily(props) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
+
+  function load() {
+    let apiKey = "6c3ed25c99387b9ebbd7be3237775381";
+    let longitude = props.coordinates.lon;
+    let latitude = props.coordinates.lat;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleForecast);
+  }
+
+  useEffect(() => {
+    setLoaded(false);
+    return null;
+  }, [props.coordinates]);
 
   if (loaded) {
     return (
@@ -29,12 +41,7 @@ export default function ForecastDaily(props) {
       </div>
     );
   } else {
-    let apiKey = "6c3ed25c99387b9ebbd7be3237775381";
-    let longitude = props.coordinates.lon;
-    let latitude = props.coordinates.lat;
-    let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
-    axios.get(apiUrl).then(handleForecast);
-
+    load();
     return "Loading...";
   }
 }
